@@ -17,24 +17,57 @@ indetail:  > create a respository(git-cmds) at github and get ssh url from code
 
 inlocal machine : get ssh key -< ssh-keygen>
 
-key will be generated. move  to ssh dir  <cd .ssh> and view content of ssh dir <ls -ltr>
-you will get know where pub key is stored <cat *absolutepath>
-key will be displayed, copy the key and paste it at remote ws
+#key will be generated. move  to ssh dir 
+ cd .ssh
+# view content of ssh dir
+  ls -altr
 
-get installed git <sudo yum install git> 
-as we know the ssh url , clone the respository < git clone *sshurl>
-by cloning , a new  respository (dir) will be created at local machine
+# you will get know where pub key is stored 
+   cat  * absolutepath
+# key will be displayed, copy the key and paste it at remote work space
+
+# get installed git 
+  sudo yum install git -y
  
-move to that dir and make necessary modifications by creating new files if needed
-we can check the status of git flow by <git status>
+# as we know the ssh url &  clone the respository by using 
+  git clone *ssh url
 
-#all the files will be added
+# frist time only we use " git clone" after that at any time we use 
+  git pull
+
+# by cloning , a new  respository (dir) will be created at local machine
+
+# move to that dir and make necessary modifications by creating new files if needed
+ cd dirctory name
+# we can check the status of git flow by
+ git status
+
+# all the files will be added
 `git add .`
 
-#all added files will be commited to that particular respository
+# all added files will be commited to that particular respository
 git commit -m "messages" 
 
-#all files which we have modified and created will be reflected at remote ws.
+# all files which we have modified and created will be reflected at remote ws.
 git push 
+
+# initilazion of directory by using 
+ git init
+
+# branching strategy 
+  The GitHub flow branching strategy is a relatively simple workflow that allows smaller teams, or web applications/products that don't require supporting multiple versions, to expedite their work.
+
+# check all branches 
+    git branch -a
+
+# changw a branch
+    git checkout 'name of the branch'
+
+# create A new branch
+   git branch "name" 
+
+# remove the branch 
+ git rm branch " name"
+
 
 this is how git cmd and  github will be used in realtime 
